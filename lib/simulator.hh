@@ -43,8 +43,14 @@ public:
 
 protected:
     /**
-     * @note Students are given this method as the only interface to interact
-     *       with the emulated hardware.
+     * @brief Generate a pulse at a specific clock cycle.
+     * @param clk Simulator clock cycle.
+     * @param pulx Step x axis.
+     * @param puly Step y axis.
+     * @param dirx Positive x direction.
+     * @param diry Positive y direction.
+     * @param down Pen down.
+     * @note This is the only interface to interact with the emulated hardware.
      */
     void setpin(std::int64_t clk, bool pulx, bool puly,
                 bool dirx, bool diry, bool down);
