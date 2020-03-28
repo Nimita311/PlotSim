@@ -1,5 +1,5 @@
 # PlotSim: 2D Plotter Simulator
-
+![PlotSim plots Rhode Island map](docs/plotsim.png "PlotSim GUI")
 
 ## Introduction
 PlotSim simulates a 2D plotter driven by two stepper motors. A pulse in the driving signal can move the motor by one step. You can control the plotting trajectory by sending pulse trains of varying frequencies to each motor.
