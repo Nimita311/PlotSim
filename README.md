@@ -15,10 +15,12 @@ The following protected method in class [`Simulator`](lib/simulator.hh) exposes 
  * @param diry Positive y direction.
  * @param down Pen down.
  */
-void setpin(std::int64_t clk, bool pulx, bool puly,
-            bool dirx, bool diry, bool down);
+void setpin(std::int64_t clk, bool pulx, bool puly, bool dirx, bool diry, bool down);
 ```
-Just as physical motors, the emulated motors have speed and acceleration limitations which are configurable in [`config.hh`](lib/config.hh) together with many other parameters. And you must always advance in time when calling `setpin` repeatedly.
+
+The simulator initializes to clock cycle -1 and location (0,0). Calling `setpin(0, true, false, true, true, true)` immediately after initialization will draw at step location (1,0) at clock cycle 0. You must always advance the clock cycle when calling `setpin`.
+
+Note that there is a ratio between motor steps and pixel location to simulate a physical leadscrew. Similar to physical motors, the emulated motors also have speed and acceleration limitations. Such parameters together with many others are configurable in [`lib/config.hh`](lib/config.hh).
 
 ## Implement Your Own Plotter
 You should implement your hardware logic in a subclass of [`Simulator`](lib/simulator.hh) and override pure virtual method `hardwareLoop` where `setpin` can be called. `hardwareLoop` will be invoked repeatedly and indefinitely by the simulator. Additionally, you can specify Arduino style init and loop functions as your user level program.
@@ -26,6 +28,9 @@ You should implement your hardware logic in a subclass of [`Simulator`](lib/simu
 There are two paradiams of using PlotSim:
 - Put all user code in `hardwareLoop`. It gives you full control over the emulated hardware, similar to what you do on a FPGA. [A stencil is given in `part1/`](part1/).
 - Implement emulated peripherals, e.g. Timers and GPIO. The peripheral logic should be handled by `hardwareLoop` while the plotting logic is written in user init and loop, similar to programming a microcontroller. [A stencil is given in `part2/`](part2/).
+
+## Oscilloscope
+PlotSim implements a scope to visualize generated pulses. Use left and right arrow keys to pan the view. Right click on your mouse and hold, move the cursor left and right to pan, up and down to adjust zoom.
 
 ## Build
 [Install SDL](https://wiki.libsdl.org/Installation). We use SDL as the graphical backend to increase cross-platform compatability.
