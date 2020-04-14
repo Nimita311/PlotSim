@@ -47,7 +47,7 @@ $ cmake -GXcode
 ```
 
 ## Copyright
-This project is made for ENGN 2920F Sensors and Actuators for Real Systems at [Brown University](brown.edu) in response to restricted lab access due to COVID-19.
+This project is made for ENGN 2920F Sensors and Actuators for Real Systems at [Brown University](https://brown.edu) in response to restricted lab access due to COVID-19.
 
 ENGN 2920F is designed and taught by [Prof. Harvey Silverman](mailto:hfs@lems.brown.edu). Simulation core is designed by [Ken Silverman](http://advsys.net/ken). This project is maintained by Brown graduate student [Haoze Zhang](mailto:haoze_zhang@brown.edu).
 
