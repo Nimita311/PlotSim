@@ -25,6 +25,7 @@ class App {
 public:
     App(Simulator& sim);
     App(Simulator& sim, void (*userInit)(Simulator&), void (*userLoop)(Simulator&));
+    ~App();
 
     void setUserInit(void (*userInit)(Simulator&)) {
         this->userInit = userInit;
@@ -69,7 +70,7 @@ private:
     int bstatus = 0;
 
     // Key status
-    char keystatus[256];
+    char* keystatus;
 
     // App flow
     int appInit();

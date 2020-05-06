@@ -7,12 +7,17 @@ namespace brown {
 
 App::App(Simulator& sim): sim(sim), dd(), xres(XRES_), yres(YRES_) {
     sim.linkApp(this);
+    keystatus = new char[256];
 }
 
 App::App(Simulator& sim, void (*userInit)(Simulator&), void (*userLoop)(Simulator&)):
     App(sim) {
     this->userInit = userInit;
     this->userLoop = userLoop;
+}
+
+App::~App() {
+    delete[] keystatus;
 }
 
 int App::appInit() {
