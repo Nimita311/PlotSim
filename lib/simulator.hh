@@ -1,3 +1,11 @@
+/**
+ * @brief    `Simulator` class.
+ * @author   Ken Silverman, Haoze Zhang
+ *
+ * Distributed under MIT License
+ * Copyright (c) 2020 Haoze Zhang | Brown Engineering
+ */
+
 #ifndef _SIMULATOR_HH_
 #define _SIMULATOR_HH_
 
@@ -11,14 +19,21 @@ namespace brown {class App;}
 
 namespace brown {
 
+/**
+ * @brief `Simulator` class emulates a 2D plotter with dual stepper motors.
+ * The plotter draws on a bitmap canvas.
+ */
 class Simulator {
 public:
     /**
+     * @brief Hardware (e.g. FPGA and microcontroller) logic emulation.
      * @note Student implementation.
      */
     virtual void hardwareLoop() = 0;
 
     /**
+     * @brief Custom time keeping.
+     * @return Current emulated clock.
      * @note Student implementation.
      */
     virtual std::int64_t getTick();

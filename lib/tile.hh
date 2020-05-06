@@ -1,3 +1,11 @@
+/**
+ * @brief    `Tile` class.
+ * @author   Ken Silverman, Haoze Zhang
+ *
+ * Distributed under MIT License
+ * Copyright (c) 2020 Haoze Zhang | Brown Engineering
+ */
+
 #ifndef _TILE_HH_
 #define _TILE_HH_
 

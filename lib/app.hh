@@ -1,3 +1,11 @@
+/**
+ * @brief    `App` class.
+ * @author   Haoze Zhang, Ken Silverman
+ *
+ * Distributed under MIT License
+ * Copyright (c) 2020 Haoze Zhang | Brown Engineering
+ */
+
 #ifndef _APP_HH_
 #define _APP_HH_
 
@@ -10,6 +18,9 @@ namespace brown {class Simulator;}
 
 namespace brown {
 
+/**
+ * @brief `App` class handles interactions with the application.
+ */
 class App {
 public:
     App(Simulator& sim);

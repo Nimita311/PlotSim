@@ -1,3 +1,11 @@
+/**
+ * @brief    `Timer` class.
+ * @author   Haoze Zhang
+ *
+ * Distributed under MIT License
+ * Copyright (c) 2020 Haoze Zhang | Brown Engineering
+ */
+
 #ifndef _TIMER_HH_
 #define _TIMER_HH_
 
@@ -5,6 +13,9 @@
 
 namespace brown {
 
+/**
+ * @brief A microncontroller timer data structure.
+ */
 class Timer {
 public:
     Timer() {}

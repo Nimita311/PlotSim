@@ -1,3 +1,11 @@
+/**
+ * @brief    Simulation configurations.
+ * @author   Haoze Zhang
+ *
+ * Distributed under MIT License
+ * Copyright (c) 2020 Haoze Zhang | Brown Engineering
+ */
+
 #ifndef _CONFIG_HH_
 #define _CONFIG_HH_
 
