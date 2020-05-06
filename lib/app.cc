@@ -8,6 +8,7 @@ namespace brown {
 App::App(Simulator& sim): sim(sim), dd(), xres(XRES_), yres(YRES_) {
     sim.linkApp(this);
     keystatus = new char[256];
+    std::memset(keystatus, 0, 256*sizeof(keystatus[0]));
 }
 
 App::App(Simulator& sim, void (*userInit)(Simulator&), void (*userLoop)(Simulator&)):
