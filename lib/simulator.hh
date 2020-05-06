@@ -26,6 +26,7 @@ public:
     const int BMPXRES;
     const int BMPYRES;
     const std::int64_t CLKFRQ;
+    const int PULPERPIX;
     const int MAXACC;
     const int MAXVEL;
     const int MINVEL;
