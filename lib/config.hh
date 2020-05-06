@@ -2,7 +2,7 @@
 #define _CONFIG_HH_
 
 /* Application settings *****************************************************/
-#define WINDOW_NAME_ "Plotter"
+#define WINDOW_NAME_ "PlotSim"
 #define XRES_ 1600
 #define YRES_ 800
 
