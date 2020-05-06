@@ -14,6 +14,20 @@ namespace brown {
  * inheriting class `brown::Simulator`.
  */
 class MySimulator: public Simulator {
+private:
+    // scale down factor of the given way points
+    const int scale = 8;
+
+    // current clock
+    std::int64_t clk = 0;
+    // current location [px]
+    int locs[2]{0, 0};
+    // current index of the point being drawn
+    std::size_t ptIdx = 0;
+
+    void moveLinear(int dx, int dy, bool isDown);
+    std::int64_t linearSpeedCurve(std::int64_t tt);
+
 public:
     MySimulator(): Simulator() {};
 
