@@ -1,7 +1,6 @@
 #include <cstdlib>
 
 #include "mysimulator.hh"
-#include "ri.hh"
 
 namespace brown {
 
