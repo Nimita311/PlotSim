@@ -31,7 +31,7 @@ public:
     void stop() {this->isRunning = false;}
     bool running() const {return isRunning;}
     void callback(Simulator& sim) {if (cb) {cb(*this, sim);}}
-    uint32_t t() const {return (prescaler+1)*period;}
+    std::int64_t t() const {return (prescaler+1)*period;}
 
 private:
     void (*cb)(Timer&, Simulator&) = nullptr;
