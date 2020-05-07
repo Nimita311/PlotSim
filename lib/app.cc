@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cstring>
 
 #include "app.hh"
 #include "config.hh"
